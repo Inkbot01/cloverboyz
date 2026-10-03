@@ -1,0 +1,3 @@
+# Vendored. Formatting somebody else's package makes every future update a
+# merge conflict against a diff we introduced ourselves.
+Packages/

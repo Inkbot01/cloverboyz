@@ -1,0 +1,22 @@
+# Wally dependencies (reinstall with `wally install`)
+Packages/
+ServerPackages/
+
+# Rojo
+sourcemap.json
+
+# Local place files
+*.rbxl
+*.rbxlx
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Nano Banana MCP output when run from the project
+generated_imgs/

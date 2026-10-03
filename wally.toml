@@ -1,0 +1,11 @@
+[package]
+name = "inkbot01/cloverboyz"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+ReplicaShared = "luminalabsgames/replicashared@1.0.0"
+ReplicaServer = "luminalabsgames/replicaserver@1.0.3"
+ReplicaClient = "luminalabsgames/replicaclient@1.0.0"
+ProfileStore = "2jammers/profilestore@0.1.0"

@@ -1,0 +1,37 @@
+-- Every remote in the game is declared here and compiled by Blink:
+--
+--     blink src/network            once
+--     blink src/network --watch    beside `rojo serve`
+--
+-- The three files under src/shared/Network are GENERATED from this one. Edit
+-- here, never there. Blink validates every client-sent value against these
+-- types before a handler sees it, so the bounds below are the first line of
+-- defence: a string(1..48) that arrives at 49 characters is dropped, not
+-- truncated. Blink does NOT rate-limit; server/RateLimit does that per handler.
+
+option ServerOutput = "./shared/Network/Server.luau"
+option ClientOutput = "./shared/Network/Client.luau"
+option TypesOutput = "./shared/Network/Types.luau"
+option Casing = Pascal
+
+-- A message the server wants one or more clients to show. How it is shown is
+-- the client's business; the server only says what kind it is.
+struct Notification {
+    Kind: enum { Info, Success, Warning, Error },
+    Title: string(1..48),
+    Body: string(0..200),
+}
+
+event Notify {
+    From: Server,
+    Type: Reliable,
+    Call: ManyAsync,
+    Data: Notification
+}
+
+-- The server's clock, for anything the client counts down against (cooldowns,
+-- timers). Returns nil when the caller is over its rate limit.
+function GetServerTime {
+    Yield: Coroutine,
+    Return: f64?
+}

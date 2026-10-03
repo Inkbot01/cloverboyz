@@ -23,6 +23,17 @@ local Settings = {
 		PlayerData = "PlayerData",
 		PeekableData = "PeekableData",
 	},
+
+	Network = {
+		-- Client-initiated calls, per player: a steady rate per second and the
+		-- burst a bucket holds when idle. Blink validates what arrives; these
+		-- bound how often. Enforced by server/RateLimit at the top of a handler.
+		Clock = { RequestsPerSecond = 1, Burst = 3 },
+		-- Mirrors string(1..48) and string(0..200) in src/network.blink. Blink
+		-- measures BYTES and does not range-check on send, and a value over the
+		-- bound is dropped by the receiver, so the server cuts before it writes.
+		Notify = { TitleBytes = 48, BodyBytes = 200 },
+	},
 }
 
 return Settings

@@ -20,3 +20,6 @@ sourcemap.json
 
 # Nano Banana MCP output when run from the project
 generated_imgs/
+
+# Tungsten's `sync debug` output
+.tungsten-debug/

@@ -1,6 +1,6 @@
 return table.freeze({
 	PreviewInStudio = true,
-	UseStudioArtwork = true,
+	UseStudioArtwork = false,
 	OpenStatsOnStart = false,
 	StartPage = "Stats",
 	DisplayOrder = 20,

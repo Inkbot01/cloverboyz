@@ -1,0 +1,22 @@
+return table.freeze({
+	Width = 1024,
+	Height = 1024,
+	Rectangles = table.freeze({
+		table.freeze({ 29, 38, 210, 227 }),
+		table.freeze({ 283, 53, 209, 207 }),
+		table.freeze({ 544, 53, 202, 211 }),
+		table.freeze({ 794, 53, 191, 202 }),
+		table.freeze({ 73, 296, 132, 192 }),
+		table.freeze({ 300, 307, 171, 180 }),
+		table.freeze({ 581, 296, 111, 200 }),
+		table.freeze({ 814, 307, 150, 170 }),
+		table.freeze({ 27, 560, 222, 168 }),
+		table.freeze({ 302, 544, 186, 179 }),
+		table.freeze({ 559, 564, 167, 150 }),
+		table.freeze({ 805, 545, 174, 178 }),
+		table.freeze({ 57, 786, 161, 179 }),
+		table.freeze({ 311, 775, 149, 199 }),
+		table.freeze({ 555, 781, 173, 187 }),
+		table.freeze({ 785, 764, 210, 213 }),
+	}),
+})

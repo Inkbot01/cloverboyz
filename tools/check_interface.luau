@@ -1,11 +1,37 @@
 local Model = require("../src/client/Interface/Model")
 local Layout = require("../src/client/Interface/Layout")
 local Appearance = require("../src/client/Interface/AppearanceModel")
+local IconAtlas = require("../src/shared/Assets/IconAtlas")
 local passed = 0
 
 local function check(condition, message)
 	assert(condition, message)
 	passed += 1
+end
+
+check(IconAtlas.Width == 1024 and IconAtlas.Height == 1024, "Atlas crops must use the verified Roblox texture size")
+check(#IconAtlas.Rectangles == 16, "All sixteen published icons must have a crop")
+for index, rect in IconAtlas.Rectangles do
+	local left, top, width, height = table.unpack(rect)
+	check(
+		left >= 0
+			and top >= 0
+			and width > 0
+			and height > 0
+			and left + width <= IconAtlas.Width
+			and top + height <= IconAtlas.Height,
+		"Icon " .. index .. " must remain inside the published texture"
+	)
+	for otherIndex = index + 1, #IconAtlas.Rectangles do
+		local other = IconAtlas.Rectangles[otherIndex]
+		check(
+			left + width <= other[1]
+				or other[1] + other[3] <= left
+				or top + height <= other[2]
+				or other[2] + other[4] <= top,
+			"Published icon crops must not include neighboring artwork"
+		)
+	end
 end
 
 local preview = Model.Defaults(true, "Test Knight")
@@ -272,7 +298,12 @@ do
 		check(math.abs(canvasHeight * layout.Scale - height) < 0.01, "The scaled canvas must fill the safe-area height")
 		local panel = layout.Panel
 		check(
-			panel.Width > 0 and panel.Height > 0 and panel.X >= 0 and panel.Y >= 0,
+			panel.Width > 0
+				and panel.Height > 0
+				and panel.X >= 0
+				and panel.Y >= 0
+				and panel.X + panel.Width <= canvasWidth
+				and panel.Y + panel.Height <= canvasHeight,
 			"The character panel must fit the viewport"
 		)
 		check(math.abs(panel.X + panel.Width / 2 - canvasWidth / 2) < 0.01, "The character panel must remain centered")

@@ -1,32 +1,43 @@
 local Fusion = require(game:GetService("ReplicatedStorage").Packages.Fusion)
 local UI = require(script.Parent.Components)
+local Theme = require(script.Parent.Theme)
+local Motion = require(script.Parent.Motion)
 
 return function(scope, state, props)
-	return UI.Frame(scope, {
+	local presence = Motion.Presence(scope, true)
+	return scope:New("CanvasGroup")({
+		BackgroundTransparency = 1,
+		BorderSizePixel = 0,
+		GroupTransparency = presence.Transparency,
 		Name = props.Name,
-		Size = UDim2.fromScale(1, 1),
+		LayoutOrder = 3,
+		Size = UDim2.fromScale(1, 0),
 		[Fusion.Children] = {
+			scope:New("UIFlexItem")({ FlexMode = Enum.UIFlexMode.Fill }),
+			scope:New("UIListLayout")({
+				SortOrder = Enum.SortOrder.LayoutOrder,
+				Padding = UDim.new(0, 12),
+			}),
 			UI.Frame(scope, {
 				Name = "Body",
-				Position = scope:Computed(function(use)
-					local layout = use(state.Layout)
-					return UDim2.fromOffset(layout.PanelPadding, layout.BodyTop)
-				end),
-				Size = scope:Computed(function(use)
-					local layout = use(state.Layout)
-					return UDim2.new(1, -layout.PanelPadding * 2, 1, -layout.BodyTop - layout.FooterHeight)
-				end),
-				[Fusion.Children] = props.Body,
+				LayoutOrder = 1,
+				Size = UDim2.fromScale(1, 0),
+				[Fusion.Children] = {
+					scope:New("UIFlexItem")({ FlexMode = Enum.UIFlexMode.Fill }),
+					props.Body,
+				},
 			}),
-			UI.Line(scope, UDim2.new(0, 16, 1, -64), UDim2.new(1, -32, 0, 1)),
+			UI.Frame(scope, {
+				Name = "FooterDivider",
+				LayoutOrder = 2,
+				Size = UDim2.new(1, 0, 0, 1),
+				BackgroundColor3 = Theme.Line,
+				BackgroundTransparency = 0,
+			}),
 			UI.Frame(scope, {
 				Name = "Footer",
-				Position = scope:Computed(function(use)
-					return UDim2.new(0, use(state.Layout).PanelPadding, 1, -54)
-				end),
-				Size = scope:Computed(function(use)
-					return UDim2.new(1, -use(state.Layout).PanelPadding * 2, 0, 44)
-				end),
+				LayoutOrder = 3,
+				Size = UDim2.new(1, 0, 0, 44),
 				[Fusion.Children] = props.Footer,
 			}),
 		},

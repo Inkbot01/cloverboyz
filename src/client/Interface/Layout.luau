@@ -1,10 +1,12 @@
 local Layout = {}
+Layout.Window = table.freeze({ WidthScale = 0.70, HeightScale = 0.80, AspectRatio = 10 / 7, CenterY = 0.48 })
 local desktopMenu = table.freeze({
-	Width = 424,
-	Height = 196,
+	Width = 480,
+	Height = 236,
 	Padding = 20,
-	RowGap = 12,
-	PagesHeight = 86,
+	RowGap = 14,
+	PagesHeight = 110,
+	UtilitiesHeight = 56,
 	PageGap = 12,
 	DockGap = 12,
 	ToolbarHeight = 54,
@@ -15,6 +17,7 @@ local compactMenu = table.freeze({
 	Padding = 8,
 	RowGap = 4,
 	PagesHeight = 54,
+	UtilitiesHeight = 44,
 	PageGap = 6,
 	DockGap = 8,
 	ToolbarHeight = 48,
@@ -53,8 +56,13 @@ function Layout.Resolve(width, height, touch, menuOpen)
 	local bottom = if touchControls
 		then math.min(if stackHUD then 164 else 140, math.max(margin, height - dockHeight - margin))
 		else margin
-	local panelWidth = math.min(940, width - margin * 2)
-	local panelHeight = math.min(648, height - margin * 2)
+	local panelWidth = width * (if touchControls then 0.94 else Layout.Window.WidthScale)
+	local panelHeight = height * (if touchControls then 0.90 else Layout.Window.HeightScale)
+	if not touchControls then
+		panelWidth = math.min(panelWidth, panelHeight * Layout.Window.AspectRatio)
+		panelHeight = panelWidth / Layout.Window.AspectRatio
+	end
+	local panelTop = height * Layout.Window.CenterY - panelHeight / 2
 	return {
 		Scale = scale,
 		CanvasWidth = width,
@@ -82,15 +90,13 @@ function Layout.Resolve(width, height, touch, menuOpen)
 		ShowQuest = width >= 1100 and height >= 680 and height - dockHeight - bottom - 24 >= 160 + margin,
 		Panel = {
 			X = (width - panelWidth) / 2,
-			Y = (height - panelHeight) / 2,
+			Y = panelTop,
 			Width = panelWidth,
 			Height = panelHeight,
 		},
 		Compact = panelWidth < 760 or panelHeight < 540,
 		Tight = panelWidth < 540,
 		ShortPanel = panelHeight < 540,
-		BodyTop = if panelHeight < 540 then 104 else 144,
-		FooterHeight = 68,
 		PanelPadding = if panelWidth < 540 then 16 else 24,
 		TouchControls = touchControls,
 	}

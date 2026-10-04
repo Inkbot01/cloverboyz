@@ -16,10 +16,10 @@ local Theme = {
 	Mana = Color3.fromRGB(98, 170, 216),
 	Stamina = Color3.fromRGB(153, 189, 115),
 	Violet = Color3.fromRGB(178, 157, 213),
-	HudInk = Color3.fromRGB(58, 63, 52),
+	HudInk = Color3.fromRGB(72, 64, 49),
 	QuestCover = Color3.fromRGB(72, 64, 49),
-	MenuSurface = Color3.fromRGB(35, 33, 29),
-	MenuHover = Color3.fromRGB(59, 54, 43),
+	MenuSurface = Color3.fromRGB(72, 64, 49),
+	MenuHover = Color3.fromRGB(89, 78, 56),
 	HudRim = Color3.fromRGB(7, 11, 14),
 	HudGold = Color3.fromRGB(195, 165, 100),
 	HudGoldLight = Color3.fromRGB(247, 222, 149),
@@ -33,6 +33,8 @@ local Theme = {
 	StrongFont = Enum.Font.SourceSansSemibold,
 	NumberFont = Enum.Font.SourceSansBold,
 	Fast = TweenInfo.new(0.14, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+	PressTween = TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+	WindowTween = TweenInfo.new(0.22, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
 	BarTween = TweenInfo.new(0.24, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 }
 

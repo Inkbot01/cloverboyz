@@ -1,9 +1,9 @@
 local Fusion = require(game:GetService("ReplicatedStorage").Packages.Fusion)
 local Theme = require(script.Parent.Theme)
+local Motion = require(script.Parent.Motion)
 local UI = require(script.Parent.Components)
 local Assets = require(script.Parent.Assets)
 local Children = Fusion.Children
-local OnEvent = Fusion.OnEvent
 local Parts = {}
 
 function Parts.Panel(scope, props)
@@ -93,12 +93,19 @@ function Parts.Key(scope, props)
 end
 
 function Parts.Button(scope, props)
-	local hovered = scope:Value(false)
 	local selected = props.Selected or false
 	local enabled = if props.Enabled == nil then true else props.Enabled
-	local surfaceColor = scope:Computed(function(use)
-		return if use(enabled) and (use(hovered) or use(selected)) then Theme.Panel else Theme.HudInk
-	end)
+	local interaction = Motion.Button(scope, enabled, props.OnActivated)
+	local hovered = interaction.Hovered
+	local surfaceColor = scope:Tween(
+		scope:Computed(function(use)
+			if use(enabled) and use(interaction.Pressed) then
+				return Theme.GoldDim
+			end
+			return if use(enabled) and (use(hovered) or use(selected)) then Theme.MenuHover else Theme.HudInk
+		end),
+		Theme.PressTween
+	)
 	local border = scope:Computed(function(use)
 		if not use(enabled) then
 			return Theme.GoldDim
@@ -108,7 +115,7 @@ function Parts.Button(scope, props)
 		end
 		return props.BorderColor or Theme.HudGold
 	end)
-	return scope:New("TextButton")({
+	return scope:New("TextButton")(interaction.Bind({
 		Name = props.Name or "HudButton",
 		LayoutOrder = props.LayoutOrder or 0,
 		Text = "",
@@ -121,23 +128,6 @@ function Parts.Button(scope, props)
 		Size = props.Size or UDim2.fromOffset(56, 56),
 		AnchorPoint = props.AnchorPoint or Vector2.zero,
 		Visible = if props.Visible == nil then true else props.Visible,
-		[OnEvent("MouseEnter")] = function()
-			hovered:set(true)
-		end,
-		[OnEvent("MouseLeave")] = function()
-			hovered:set(false)
-		end,
-		[OnEvent("SelectionGained")] = function()
-			hovered:set(true)
-		end,
-		[OnEvent("SelectionLost")] = function()
-			hovered:set(false)
-		end,
-		[OnEvent("Activated")] = function()
-			if Fusion.peek(enabled) and props.OnActivated then
-				props.OnActivated()
-			end
-		end,
 		[Children] = {
 			scope:Computed(function(use, inner)
 				local dimensions = use(props.Size) or UDim2.fromOffset(56, 56)
@@ -164,7 +154,7 @@ function Parts.Button(scope, props)
 				})
 				else nil,
 		},
-	})
+	}))
 end
 
 return table.freeze(Parts)

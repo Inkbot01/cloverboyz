@@ -1,5 +1,6 @@
 local Fusion = require(game:GetService("ReplicatedStorage").Packages.Fusion)
 local Theme = require(script.Parent.Theme)
+local Motion = require(script.Parent.Motion)
 local UI = require(script.Parent.Components)
 local Art = require(script.Parent.HudParts)
 local Appearance = require(script.Parent.AppearanceModel)
@@ -114,44 +115,45 @@ local function palette(scope, state, actions, field, title, order)
 		local selected = scope:Computed(function(use)
 			return use(state.AppearanceDraft)[field] == option.Id
 		end)
-		local focused = scope:Value(false)
+		local enabled = scope:Computed(function(use)
+			return not use(state.AppearanceBusy)
+		end)
+		local interaction = Motion.Button(scope, enabled, function()
+			actions.ChangeAppearance(field, option.Id)
+		end)
+		local focused = interaction.Hovered
+		local color = if option.Color then Color3.fromHex(option.Color) else Theme.MenuHover
 		table.insert(
 			swatches,
-			scope:New("TextButton")({
+			scope:New("TextButton")(interaction.Bind({
 				Name = option.Name,
 				LayoutOrder = index,
 				Size = UDim2.fromOffset(44, 44),
-				BackgroundColor3 = if option.Color then Color3.fromHex(option.Color) else Theme.MenuHover,
+				BackgroundColor3 = scope:Tween(
+					scope:Computed(function(use)
+						return if use(interaction.Pressed)
+							then color:Lerp(Theme.HudRim, 0.25)
+							elseif use(focused) then color:Lerp(Theme.Text, 0.12)
+							else color
+					end),
+					Theme.PressTween
+				),
 				BorderSizePixel = 0,
 				AutoButtonColor = false,
 				Text = if option.Color then "" else "Base",
 				Font = Theme.StrongFont,
 				TextSize = 15,
 				TextColor3 = Theme.Text,
-				Selectable = scope:Computed(function(use)
-					return not use(state.AppearanceBusy)
-				end),
-				[Fusion.OnEvent("Activated")] = function()
-					actions.ChangeAppearance(field, option.Id)
-				end,
-				[Fusion.OnEvent("SelectionGained")] = function()
-					focused:set(true)
-				end,
-				[Fusion.OnEvent("SelectionLost")] = function()
-					focused:set(false)
-				end,
-				[Fusion.OnEvent("MouseEnter")] = function()
-					focused:set(true)
-				end,
-				[Fusion.OnEvent("MouseLeave")] = function()
-					focused:set(false)
-				end,
+				Selectable = enabled,
 				[Children] = {
 					scope:New("UIStroke")({
 						ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-						Thickness = scope:Computed(function(use)
-							return if use(selected) then 3 else 1
-						end),
+						Thickness = scope:Tween(
+							scope:Computed(function(use)
+								return if use(selected) then 3 else 1
+							end),
+							Theme.Fast
+						),
 						Color = scope:Computed(function(use)
 							return if use(selected) or use(focused) then Theme.HudGoldLight else Theme.GoldDim
 						end),
@@ -169,7 +171,7 @@ local function palette(scope, state, actions, field, title, order)
 						end),
 					}),
 				},
-			})
+			}))
 		)
 	end
 	return UI.Frame(scope, {
@@ -353,10 +355,14 @@ local function avatar(scope, state, actions, compact)
 end
 
 return function(scope, state, actions)
-	return UI.Frame(scope, {
+	local presence = Motion.Presence(scope, state.Open)
+	return scope:New("CanvasGroup")({
 		Name = "CustomizationOverlay",
+		BackgroundTransparency = 1,
+		BorderSizePixel = 0,
+		GroupTransparency = presence.Transparency,
 		Size = UDim2.fromScale(1, 1),
-		Visible = state.Open,
+		Visible = presence.Visible,
 		ZIndex = 10,
 		[Children] = {
 			scope:New("TextButton")({
@@ -373,14 +379,20 @@ return function(scope, state, actions)
 			UI.Frame(scope, {
 				Name = "CustomizationDock",
 				AnchorPoint = Vector2.new(0.5, 0.5),
-				Position = UDim2.fromScale(0.5, 0.5),
-				ZIndex = 2,
-				Size = scope:Computed(function(use)
-					local l = use(state.Layout)
-					return UDim2.new(1, -l.Margin * 2, 1, -l.Margin * 2)
+				Position = scope:Computed(function(use)
+					return UDim2.fromScale(0.5, 0.5 + (1 - use(presence.Progress)) * 0.018)
 				end),
+				ZIndex = 2,
+				Size = UDim2.fromScale(0.92, 0.88),
 				[Children] = {
-					scope:New("UISizeConstraint")({ MaxSize = Vector2.new(1280, 760) }),
+					scope:Computed(function(use, inner)
+						return if use(state.Layout).TouchControls
+							then nil
+							else inner:New("UIAspectRatioConstraint")({
+								AspectRatio = 32 / 19,
+								AspectType = Enum.AspectType.FitWithinMaxSize,
+							})
+					end),
 					scope:Computed(function(use, inner)
 						local l = use(state.Layout)
 						local compact = l.CanvasWidth < 1000

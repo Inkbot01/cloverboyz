@@ -1,5 +1,6 @@
 local Fusion = require(game:GetService("ReplicatedStorage").Packages.Fusion)
 local Theme = require(script.Parent.Theme)
+local Motion = require(script.Parent.Motion)
 local Assets = require(script.Parent.Assets)
 local Model = require(script.Parent.Model)
 
@@ -108,32 +109,44 @@ function Components.Icon(scope, props)
 end
 
 function Components.Button(scope, props)
-	local hovered = scope:Value(false)
 	local enabled = if props.Enabled == nil then true else props.Enabled
+	local interaction = Motion.Button(scope, enabled, props.OnActivated)
+	local hovered = interaction.Hovered
 	local selected = props.Selected or false
 	local primary = props.Variant == "Primary"
 	local ghost = props.Variant == "Ghost"
 	local quiet = ghost or props.Variant == "Quiet" or props.Variant == "Row"
-	local background = scope:Computed(function(use)
-		if primary and use(enabled) then
-			return if use(hovered) then Theme.GoldLight else Theme.Gold
-		end
-		if use(selected) then
-			return Theme.GreenDark
-		end
-		return if use(hovered) and use(enabled)
-			then (props.HoverColor or Theme.Raised)
-			else (use(props.Color) or Theme.Panel)
-	end)
-	return scope:New("TextButton")({
+	local background = scope:Tween(
+		scope:Computed(function(use)
+			if use(enabled) and use(interaction.Pressed) then
+				return Theme.GoldDim
+			end
+			if primary and use(enabled) then
+				return if use(hovered) then Theme.GoldLight else Theme.Gold
+			end
+			if use(selected) then
+				return Theme.GreenDark
+			end
+			return if use(hovered) and use(enabled)
+				then (props.HoverColor or Theme.Raised)
+				else (use(props.Color) or Theme.Panel)
+		end),
+		Theme.PressTween
+	)
+	return scope:New("TextButton")(interaction.Bind({
 		Name = props.Name or "Button",
 		LayoutOrder = props.LayoutOrder or 0,
 		Text = "",
 		AutoButtonColor = false,
 		BackgroundTransparency = if ghost
-			then scope:Computed(function(use)
-				return if use(enabled) and (use(hovered) or use(selected)) then 0.15 else 1
-			end)
+			then scope:Tween(
+				scope:Computed(function(use)
+					return if use(enabled) and (use(hovered) or use(selected) or use(interaction.Pressed))
+						then 0.15
+						else 1
+				end),
+				Theme.Fast
+			)
 			else (if props.Variant == "Quiet" then 0.45 else 0),
 		BackgroundColor3 = background,
 		BorderSizePixel = 0,
@@ -143,30 +156,16 @@ function Components.Button(scope, props)
 		Visible = if props.Visible == nil then true else props.Visible,
 		Selectable = enabled,
 		SelectionOrder = props.SelectionOrder or 0,
-		[OnEvent("MouseEnter")] = function()
-			hovered:set(true)
-		end,
-		[OnEvent("MouseLeave")] = function()
-			hovered:set(false)
-		end,
-		[OnEvent("SelectionGained")] = function()
-			hovered:set(true)
-		end,
-		[OnEvent("SelectionLost")] = function()
-			hovered:set(false)
-		end,
-		[OnEvent("Activated")] = function()
-			if Fusion.peek(enabled) and props.OnActivated then
-				props.OnActivated()
-			end
-		end,
 		[Children] = {
 			scope:New("UIStroke")({
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 				Thickness = 1,
-				Transparency = scope:Computed(function(use)
-					return if quiet and not use(hovered) and not use(selected) then 1 else 0
-				end),
+				Transparency = scope:Tween(
+					scope:Computed(function(use)
+						return if quiet and not use(hovered) and not use(selected) then 1 else 0
+					end),
+					Theme.Fast
+				),
 				Color = scope:Computed(function(use)
 					if not use(enabled) then
 						return Theme.Line
@@ -192,7 +191,7 @@ function Components.Button(scope, props)
 				else nil,
 			props[Children],
 		},
-	})
+	}))
 end
 
 function Components.Bar(scope, props)

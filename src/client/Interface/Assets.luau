@@ -1,5 +1,6 @@
 local Fusion = require(game:GetService("ReplicatedStorage").Packages.Fusion)
 local Published = require(game:GetService("ReplicatedStorage").Shared.Assets.UI)
+local IconAtlas = require(game:GetService("ReplicatedStorage").Shared.Assets.IconAtlas)
 local StudioImages = require(game:GetService("ReplicatedStorage").Shared.Assets.StudioImages)
 local Theme = require(script.Parent.Theme)
 local Config = require(script.Parent.Config)
@@ -30,27 +31,9 @@ local icons = {
 	Ore = 7,
 	Crystal = 7,
 }
-local rectangles = {
-	{ 36, 47, 293, 325 },
-	{ 347, 65, 603, 318 },
-	{ 666, 65, 914, 323 },
-	{ 972, 65, 1206, 312 },
-	{ 89, 363, 251, 598 },
-	{ 367, 376, 577, 596 },
-	{ 711, 363, 848, 608 },
-	{ 997, 376, 1180, 584 },
-	{ 33, 686, 305, 892 },
-	{ 370, 666, 597, 885 },
-	{ 685, 691, 889, 874 },
-	{ 986, 667, 1199, 886 },
-	{ 70, 962, 267, 1182 },
-	{ 381, 949, 563, 1193 },
-	{ 680, 957, 891, 1186 },
-	{ 961, 935, 1219, 1196 },
-}
 local skins = {
 	control = {
-		Fill = "control",
+		Fill = "window",
 		Art = "ornate-frame-v2",
 		Slice = Rect.new(192, 192, 320, 317),
 		Scale = 0.14,
@@ -65,20 +48,20 @@ local skins = {
 	},
 	window = { Fill = "window", Art = "ornate-frame-v2", Slice = Rect.new(192, 192, 320, 317), Scale = 0.20, Inset = 7 },
 	plaque = {
-		Fill = "control",
+		Fill = "window",
 		Art = "ornate-frame-v2",
 		Slice = Rect.new(192, 192, 320, 317),
 		Scale = 0.10,
 		Inset = 4,
 	},
 	compass = {
-		Fill = "control",
+		Fill = "window",
 		Art = "ornate-frame-v2",
 		Slice = Rect.new(192, 192, 320, 317),
 		Scale = 0.13,
 		Inset = 5,
 	},
-	well = { Fill = "control", Art = "ornate-frame-v2", Slice = Rect.new(192, 192, 320, 317), Scale = 0.06, Inset = 2 },
+	well = { Fill = "window", Art = "ornate-frame-v2", Slice = Rect.new(192, 192, 320, 317), Scale = 0.06, Inset = 2 },
 	key = { Fill = "track", Art = "ornate-frame-v2", Slice = Rect.new(192, 192, 320, 317), Scale = 0.04, Inset = 2 },
 	track = { Fill = "track", Art = "ornate-meter-v2", Slice = Rect.new(160, 70, 864, 110), Scale = 0.16, Inset = 4 },
 	slim = { Fill = "track", Art = "ornate-meter-v2", Slice = Rect.new(160, 70, 864, 110), Scale = 0.075, Inset = 2 },
@@ -114,27 +97,36 @@ end
 function Assets.Sprite(scope, props)
 	local rectangle = scope:Computed(function(use)
 		if use(props.Icon) == "Compass" then
-			return { Content = Assets.Source("compass-icon-v1"), Offset = Vector2.zero, Size = Vector2.zero }
+			return {
+				Content = Assets.Source("compass-icon-v1"),
+				Offset = Vector2.zero,
+				Size = Vector2.zero,
+				AspectRatio = 155 / 192,
+			}
 		end
-		local index = (icons[use(props.Icon)] or 15) - 1
+		local index = icons[use(props.Icon)] or 15
 		local images = editorImages()
-		local preview = (images and images["icon-" .. (index + 1)])
-			or (
-				if studioArtwork or not Published["clover-icons-v1"]
-					then StudioImages.Get("icon-" .. (index + 1))
-					else nil
-			)
+		local preview = (images and images["icon-" .. index])
+			or (if studioArtwork or not Published["clover-icons-v1"] then StudioImages.Get("icon-" .. index) else nil)
 		if preview then
-			return { Content = Content.fromObject(preview), Offset = Vector2.zero, Size = Vector2.zero }
+			return {
+				Content = Content.fromObject(preview),
+				Offset = Vector2.zero,
+				Size = Vector2.zero,
+				AspectRatio = preview.Size.X / preview.Size.Y,
+			}
 		end
-		local rect = rectangles[index + 1]
+		local rect = IconAtlas.Rectangles[index]
 		return {
-			Content = Assets.Source("clover-icons-v1"),
+			Content = if Published["clover-icons-v1"]
+				then Content.fromUri(Published["clover-icons-v1"])
+				else Content.none,
 			Offset = Vector2.new(rect[1], rect[2]),
-			Size = Vector2.new(rect[3] - rect[1], rect[4] - rect[2]),
+			Size = Vector2.new(rect[3], rect[4]),
+			AspectRatio = rect[3] / rect[4],
 		}
 	end)
-	return scope:New("ImageLabel")({
+	return scope:New("Frame")({
 		Name = props.Name or "Icon",
 		LayoutOrder = props.LayoutOrder or 0,
 		Size = props.Size or UDim2.fromOffset(32, 32),
@@ -142,22 +134,39 @@ function Assets.Sprite(scope, props)
 		AnchorPoint = props.AnchorPoint or Vector2.zero,
 		BackgroundTransparency = 1,
 		BorderSizePixel = 0,
-		ImageContent = scope:Computed(function(use)
-			return use(rectangle).Content
-		end),
-		ImageRectOffset = scope:Computed(function(use)
-			return use(rectangle).Offset
-		end),
-		ImageRectSize = scope:Computed(function(use)
-			return use(rectangle).Size
-		end),
-		ScaleType = Enum.ScaleType.Fit,
-		ResampleMode = Enum.ResamplerMode.Pixelated,
-		ImageColor3 = props.Tint or Color3.new(1, 1, 1),
-		ImageTransparency = props.Transparency or 0,
+		ClipsDescendants = true,
 		Visible = if props.Visible == nil then true else props.Visible,
 		ZIndex = props.ZIndex or 1,
-		[Fusion.Children] = props[Fusion.Children],
+		[Fusion.Children] = {
+			scope:New("ImageLabel")({
+				Name = "Artwork",
+				AnchorPoint = Vector2.new(0.5, 0.5),
+				Position = UDim2.fromScale(0.5, 0.5),
+				Size = UDim2.fromScale(1, 1),
+				BackgroundTransparency = 1,
+				BorderSizePixel = 0,
+				ImageContent = scope:Computed(function(use)
+					return use(rectangle).Content
+				end),
+				ImageRectOffset = scope:Computed(function(use)
+					return use(rectangle).Offset
+				end),
+				ImageRectSize = scope:Computed(function(use)
+					return use(rectangle).Size
+				end),
+				ScaleType = Enum.ScaleType.Stretch,
+				ResampleMode = Enum.ResamplerMode.Pixelated,
+				ImageColor3 = props.Tint or Color3.new(1, 1, 1),
+				ImageTransparency = props.Transparency or 0,
+				[Fusion.Children] = scope:New("UIAspectRatioConstraint")({
+					AspectType = Enum.AspectType.FitWithinMaxSize,
+					AspectRatio = scope:Computed(function(use)
+						return use(rectangle).AspectRatio
+					end),
+				}),
+			}),
+			props[Fusion.Children],
+		},
 	})
 end
 
@@ -175,21 +184,24 @@ function Assets.Skin(scope, skin, layer, color, materialTransparency)
 		BorderSizePixel = 0,
 		ImageContent = Assets.Source(if trim then definition.Art else definition.Fill .. "-fill"),
 		ImageColor3 = if trim
-			then scope:Computed(function(use)
-				local tint = use(color)
-				if tint == Theme.Green then
-					return Color3.fromRGB(172, 255, 194)
-				end
-				if tint == Theme.HudRim then
-					return Color3.fromRGB(18, 22, 24)
-				end
-				if tint == Theme.GoldDim or tint == Theme.HudGoldShade then
-					return Color3.fromRGB(170, 174, 169)
-				end
-				return if tint == Theme.HudGoldLight or tint == Theme.GoldLight
-					then Color3.new(1, 1, 1)
-					else Color3.fromRGB(224, 226, 222)
-			end)
+			then scope:Tween(
+				scope:Computed(function(use)
+					local tint = use(color)
+					if tint == Theme.Green then
+						return Color3.fromRGB(172, 255, 194)
+					end
+					if tint == Theme.HudRim then
+						return Color3.fromRGB(18, 22, 24)
+					end
+					if tint == Theme.GoldDim or tint == Theme.HudGoldShade then
+						return Color3.fromRGB(170, 174, 169)
+					end
+					return if tint == Theme.HudGoldLight or tint == Theme.GoldLight
+						then Color3.new(1, 1, 1)
+						else Color3.fromRGB(224, 226, 222)
+				end),
+				Theme.Fast
+			)
 			else color,
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = if trim then definition.Slice else fillSlices[definition.Fill],

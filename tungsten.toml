@@ -1,21 +1,6 @@
-# Uploads the game's images to Roblox and writes their ids into Luau.
-#
-#   tungsten sync cloud --dry-run   what would upload, touching nothing
-#   tungsten sync cloud             upload what is new or changed
-#   tungsten sync debug             write the final files to .tungsten-debug/
-#
-# The Open Cloud key is TUNGSTEN_API_KEY in .env (gitignored, never commit it).
-# It needs asset read and write for the creator below. tungsten.lock.toml
-# remembers what is already up by content hash, so commit it: without it the
-# next sync uploads everything again.
-#
-# Roblox moderates every image after it is up, and a rejected one fails
-# silently (the ImageLabel just draws nothing). Check the output after a sync.
+max_concurrent_uploads = 3
 
 [creator]
-# Uploads land on this account until the game has a group; then switch to
-# type = "group" and the group's id. Assets already uploaded stay where they
-# are, so do this before the first real sync, not after.
 type = "user"
 id = 290622415
 
@@ -23,15 +8,9 @@ id = 290622415
 style = "flat"
 strip_extension = true
 
-# One folder, one generated module. Another kind of asset (sounds, a second
-# art set) is another [inputs.<name>] block with its own folder and output,
-# not a wider glob here.
-#
-# Not packable: a spritesheet would mean carrying ImageRectOffset and
-# ImageRectSize beside every reference. Flip it when there are dozens of
-# small icons drawn together, not before.
 [inputs.ui]
-path = "assets/ui/*"
-output_path = "src/shared/Assets/UI.luau"
+path = "assets/interface/exports/*.png"
+output_path = "tmp/tungsten/UI.luau"
 type = "image"
 packable = false
+bleed = false

@@ -1,0 +1,8 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: a single square inventory UI icon for a pixel-art Black Clover fantasy RPG. Draw a small front-facing antique brass COMPASS, circular warm gold rim with clear cardinal tick marks, muted ivory dial and a strong green-and-ivory pointed needle angled northeast. One tiny clover at the pivot. Deliberate clean 32-bit pixel clusters, readable silhouette, restrained metal highlights and black outline, matching hand-painted fantasy pixel inventory icons. Entire icon centered and fully visible with equal transparent padding. No text, no letters, no background, no drop shadow outside its silhouette. Must be legible when displayed 40 pixels wide; do not add intricate filigree or small noisy markings. Genuine transparent background.",
+  "source": "compass-icon-v1-source.png",
+  "export": "exports/compass-icon-v1.png",
+  "exportResampling": "nearest",
+  "transparent": true
+}

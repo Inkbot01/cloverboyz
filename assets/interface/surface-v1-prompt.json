@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: seamless square pixel-art material tile for the interiors of a Black Clover inspired fantasy RPG HUD. Create ONLY a flat, front-facing swatch of finely worn grimoire book-cover leather, edge-to-edge, no object, no borders, no corner decorations, no frame, no typography, no symbols, no vignette, no lighting gradient. Neutral warm gray monochrome, medium-light gray base (#b5b2a9), restrained darker pores and soft rubbed patches. Very low contrast. Deliberately drawn small pixel clusters, subtle old 16-bit RPG material, clean restrained texture, not random TV noise, not photographic grain, not large cracks, not mottled stone. Seamless and evenly illuminated across every edge. This will be tinted dark olive-charcoal in engine behind readable cream text. Square 512x512 image.",
+  "source": "grimoire-leather-v1-source.png",
+  "export": "exports/grimoire-leather-v1.png",
+  "exportSize": [
+    512,
+    512
+  ],
+  "exportResampling": "nearest",
+  "usage": "Native tiled ImageLabel with theme tint, opacity and UIGradient. Dynamic text is never baked into artwork."
+}

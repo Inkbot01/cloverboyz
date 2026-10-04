@@ -5,6 +5,7 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Fusion = "elttob/fusion@0.3.0"
 ReplicaShared = "luminalabsgames/replicashared@1.0.0"
 ReplicaServer = "luminalabsgames/replicaserver@1.0.3"
 ReplicaClient = "luminalabsgames/replicaclient@1.0.0"

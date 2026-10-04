@@ -8,9 +8,14 @@ version = "0.1.0"
 dependencies = []
 
 [[package]]
+name = "elttob/fusion"
+version = "0.3.0"
+dependencies = []
+
+[[package]]
 name = "inkbot01/cloverboyz"
 version = "0.1.0"
-dependencies = [["ProfileStore", "2jammers/profilestore@0.1.0"], ["ReplicaClient", "luminalabsgames/replicaclient@1.0.1"], ["ReplicaServer", "luminalabsgames/replicaserver@1.0.3"], ["ReplicaShared", "luminalabsgames/replicashared@1.0.0"]]
+dependencies = [["Fusion", "elttob/fusion@0.3.0"], ["ProfileStore", "2jammers/profilestore@0.1.0"], ["ReplicaClient", "luminalabsgames/replicaclient@1.0.1"], ["ReplicaServer", "luminalabsgames/replicaserver@1.0.3"], ["ReplicaShared", "luminalabsgames/replicashared@1.0.0"]]
 
 [[package]]
 name = "luminalabsgames/replicaclient"

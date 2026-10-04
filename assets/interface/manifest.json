@@ -1,0 +1,237 @@
+{
+  "atlas": "clover-icons-v1",
+  "size": [
+    1254,
+    1254
+  ],
+  "rectangles": [
+    [
+      36,
+      47,
+      293,
+      325
+    ],
+    [
+      347,
+      65,
+      603,
+      318
+    ],
+    [
+      666,
+      65,
+      914,
+      323
+    ],
+    [
+      972,
+      65,
+      1206,
+      312
+    ],
+    [
+      89,
+      363,
+      251,
+      598
+    ],
+    [
+      367,
+      376,
+      577,
+      596
+    ],
+    [
+      711,
+      363,
+      848,
+      608
+    ],
+    [
+      997,
+      376,
+      1180,
+      584
+    ],
+    [
+      33,
+      686,
+      305,
+      892
+    ],
+    [
+      370,
+      666,
+      597,
+      885
+    ],
+    [
+      685,
+      691,
+      889,
+      874
+    ],
+    [
+      986,
+      667,
+      1199,
+      886
+    ],
+    [
+      70,
+      962,
+      267,
+      1182
+    ],
+    [
+      381,
+      949,
+      563,
+      1193
+    ],
+    [
+      680,
+      957,
+      891,
+      1186
+    ],
+    [
+      961,
+      935,
+      1219,
+      1196
+    ]
+  ],
+  "skins": {
+    "control": [
+      6,
+      6,
+      26,
+      26
+    ],
+    "portrait": [
+      24,
+      24,
+      72,
+      72
+    ],
+    "window": [
+      24,
+      24,
+      72,
+      72
+    ],
+    "track": [
+      3,
+      3,
+      13,
+      13
+    ]
+  },
+  "ornate": {
+    "ornate-frame-v2": {
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceCrop": [
+        29,
+        32,
+        1225,
+        1220
+      ],
+      "exportSize": [
+        512,
+        509
+      ],
+      "exportResampling": "nearest",
+      "centerAlpha": 0,
+      "sliceCenter": [
+        192,
+        192,
+        320,
+        317
+      ],
+      "sliceScales": {
+        "control": 0.14,
+        "portrait": 0.2,
+        "window": 0.2,
+        "well": 0.06,
+        "key": 0.04,
+        "plaque": 0.1,
+        "compass": 0.13
+      }
+    },
+    "ornate-meter-v2": {
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceCrop": [
+        0,
+        171,
+        2172,
+        552
+      ],
+      "exportSize": [
+        1024,
+        180
+      ],
+      "exportResampling": "nearest",
+      "centerAlpha": 0,
+      "sliceCenter": [
+        160,
+        70,
+        864,
+        110
+      ],
+      "sliceScales": {
+        "track": 0.16,
+        "slim": 0.075,
+        "meter": 0.16
+      }
+    }
+  },
+  "publishedAssets": [
+    "clover-icons-v1",
+    "control-fill",
+    "ornate-frame-v2",
+    "ornate-meter-v2",
+    "portrait-fill",
+    "track-fill",
+    "window-fill",
+    "grimoire-leather-v1",
+    "compass-icon-v1"
+  ],
+  "standaloneIcons": {
+    "compass-icon-v1": {
+      "sourceSize": [1254, 1254],
+      "sourceCrop": [233, 118, 1022, 1098],
+      "exportSize": [155, 192],
+      "exportResampling": "nearest",
+      "transparent": true,
+      "promptFile": "compass-v1-prompt.json"
+    }
+  },
+  "materials": {
+    "grimoire-leather-v1": {
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "exportSize": [
+        512,
+        512
+      ],
+      "exportResampling": "nearest",
+      "tileSize": [
+        160,
+        160
+      ],
+      "imageTransparency": 0.68,
+      "tint": "theme surface color lightened by 18%",
+      "shading": "native vertical UIGradient",
+      "promptFile": "surface-v1-prompt.json"
+    }
+  }
+}

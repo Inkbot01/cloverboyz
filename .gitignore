@@ -23,3 +23,12 @@ generated_imgs/
 
 # Tungsten's `sync debug` output
 .tungsten-debug/
+
+# Local UI transfer buffers and rasterization cache
+tmp/
+.tungsten_debug/
+
+# Python caches and obsolete offline render drafts
+__pycache__/
+*.pyc
+output/ui-previews/

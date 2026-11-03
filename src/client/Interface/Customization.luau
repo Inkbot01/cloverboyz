@@ -58,7 +58,7 @@ local function stepper(scope, state, actions, field, label, order)
 						local value = use(state.AppearanceDraft).Scale
 						return use(editable) and (if direction < 0 then value > 0.9 else value < 1.1)
 					end
-					return use(editable)
+					return use(editable) and #Appearance.Options[field] > 1
 				end),
 				OnActivated = function()
 					if field == "Scale" then
@@ -140,7 +140,7 @@ local function palette(scope, state, actions, field, title, order)
 				),
 				BorderSizePixel = 0,
 				AutoButtonColor = false,
-				Text = if option.Color then "" else "Base",
+				Text = "",
 				Font = Theme.StrongFont,
 				TextSize = 15,
 				TextColor3 = Theme.Text,
@@ -236,22 +236,14 @@ local function options(scope, state, actions, colors)
 				then {
 					palette(scope, state, actions, "SkinTone", "Skin tone", 2),
 					palette(scope, state, actions, "HairColor", "Hair color", 3),
-					palette(scope, state, actions, "OutfitColor", "Clothing", 4),
-					Art.Text(scope, {
-						LayoutOrder = 5,
-						Text = "Clothing color applies to training clothes.",
-						TextSize = 16,
-						TextColor3 = Theme.Muted,
-						TextWrapped = true,
-						Size = UDim2.new(1, -8, 0, 44),
-					}),
 				}
 				else {
-					stepper(scope, state, actions, "Hair", "Hairstyle", 2),
-					stepper(scope, state, actions, "Face", "Expression", 3),
-					stepper(scope, state, actions, "Outfit", "Clothing", 4),
-					stepper(scope, state, actions, "Accessories", "Accessories", 5),
-					stepper(scope, state, actions, "Scale", "Character size", 6),
+					stepper(scope, state, actions, "Gender", "Gender", 2),
+					stepper(scope, state, actions, "Hair", "Hairstyle", 3),
+					stepper(scope, state, actions, "Face", "Expression", 4),
+					stepper(scope, state, actions, "Outfit", "Clothing", 5),
+					stepper(scope, state, actions, "Accessories", "Accessories", 6),
+					stepper(scope, state, actions, "Scale", "Character size", 7),
 				},
 		},
 	})

@@ -37,13 +37,48 @@ end
 local preview = Model.Defaults(true, "Test Knight")
 local live = Model.Defaults(false, "Test Knight")
 local originalAppearance = Appearance.Defaults()
+local femaleAppearance = Appearance.Patch(originalAppearance, { Gender = "female", Hair = "wind_swept" })
+check(femaleAppearance.Gender == "female", "Female rig selection must be accepted")
+check(
+	Appearance.Patch(femaleAppearance, { Gender = "male" }).Hair == "wind_swept",
+	"Changing gender must preserve cosmetics"
+)
+check(
+	Appearance.Patch(femaleAppearance, { Gender = "invalid" }).Gender == "female",
+	"Unknown rig selections must be rejected"
+)
+check(Appearance.Cycle(femaleAppearance, "Gender", 1).Gender == "male", "Gender selector must wrap from Female to Male")
+check(
+	not Appearance.Equal(originalAppearance, Appearance.Patch(originalAppearance, { Gender = "female" })),
+	"Gender changes must mark the draft unsaved"
+)
+for field, choices in Appearance.Options do
+	check(
+		Appearance.Option(field, Appearance.Defaults()[field]) ~= nil,
+		"Every default must be a real available choice"
+	)
+	for _, choice in choices do
+		check(
+			choice.Id ~= "original" and choice.Id ~= "training" and choice.Id ~= "classic" and choice.Id ~= "visible",
+			"Placeholder choices must not return"
+		)
+	end
+end
+check(Appearance.Options.OutfitColor == nil, "Nonfunctional clothing color controls must be removed")
+check(
+	Appearance.Equal(
+		Appearance.Patch(originalAppearance, { Gender = "original", SkinTone = "original", Outfit = "training" }),
+		originalAppearance
+	),
+	"Legacy placeholder values must not override valid defaults"
+)
 local recolored = Appearance.Patch(
 	originalAppearance,
-	{ SkinTone = "copper", HairColor = "silver", Outfit = "training", Scale = 1.05 }
+	{ SkinTone = "copper", HairColor = "silver", Outfit = "forest_initiate", Scale = 1.05 }
 )
 check(recolored.SkinTone == "copper" and recolored.Scale == 1.05, "Valid appearance choices must reach the preview")
 check(
-	originalAppearance.SkinTone == "original" and originalAppearance.Scale == 1,
+	originalAppearance.SkinTone == "warm" and originalAppearance.Scale == 1,
 	"Draft appearance changes must not mutate the saved snapshot"
 )
 check(not Appearance.Equal(originalAppearance, recolored), "Appearance changes must be marked unsaved")
@@ -71,11 +106,11 @@ do
 	)
 end
 check(
-	Appearance.Cycle(originalAppearance, "Face", -1).Face == "blank",
+	Appearance.Cycle(originalAppearance, "Hair", -1).Hair == "ember_ponytail",
 	"Previous appearance selection must wrap to the last option"
 )
 check(
-	Appearance.Cycle(Appearance.Patch(originalAppearance, { Face = "blank" }), "Face", 1).Face == "original",
+	Appearance.Cycle(Appearance.Patch(originalAppearance, { Hair = "ember_ponytail" }), "Hair", 1).Hair == "iron_spikes",
 	"Next appearance selection must wrap to the first option"
 )
 check(
@@ -83,7 +118,7 @@ check(
 	"Unexpected selector directions must not change appearance"
 )
 check(
-	Appearance.Patch(recolored, { Face = "classic" }).SkinTone == "copper",
+	Appearance.Patch(recolored, { Gender = "female" }).SkinTone == "copper",
 	"Partial authoritative appearance updates must preserve other fields"
 )
 check(

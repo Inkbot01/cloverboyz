@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-08",
+  "parts": 20,
+  "triangles": 11960,
+  "variants": 4,
+  "nativeCombinations": 12,
+  "contentFetchCallbacks": 52,
+  "contentFailures": 0,
+  "interfaceChecks": 561,
+  "placeholderLabelsFound": 0,
+  "selectorOverflowWide": 0,
+  "selectorOverflowNarrow": 0,
+  "nativeNarrowSafeArea": [
+    700,
+    1000
+  ],
+  "playTested": false,
+  "capeDeformation": "rigid; animation fit unverified"
+}

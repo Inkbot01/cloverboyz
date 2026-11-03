@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "checks": "20 Blender FBX/glTF reimports: part counts, triangle counts, nondegenerate faces, finite vertices, bounded UVs, materials, resource files and axis/scale-preserving bounds",
+  "face": {
+    "channels": 4,
+    "size": [
+      1254,
+      1254
+    ],
+    "transparentFraction": 0.9250271539367485
+  },
+  "results": [
+    {
+      "id": "hair-iron-spikes-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 352,
+      "passed": true
+    },
+    {
+      "id": "hair-iron-spikes-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 352,
+      "passed": true
+    },
+    {
+      "id": "hair-wind-swept-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 352,
+      "passed": true
+    },
+    {
+      "id": "hair-wind-swept-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 352,
+      "passed": true
+    },
+    {
+      "id": "hair-ember-ponytail-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 300,
+      "passed": true
+    },
+    {
+      "id": "hair-ember-ponytail-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 300,
+      "passed": true
+    },
+    {
+      "id": "outfit-ink-knight-v1",
+      "format": "gltf",
+      "parts": 5,
+      "triangles": 1010,
+      "passed": true
+    },
+    {
+      "id": "outfit-ink-knight-v1",
+      "format": "fbx",
+      "parts": 5,
+      "triangles": 1010,
+      "passed": true
+    },
+    {
+      "id": "outfit-forest-initiate-v1",
+      "format": "gltf",
+      "parts": 5,
+      "triangles": 1122,
+      "passed": true
+    },
+    {
+      "id": "outfit-forest-initiate-v1",
+      "format": "fbx",
+      "parts": 5,
+      "triangles": 1122,
+      "passed": true
+    },
+    {
+      "id": "accessory-clover-headband-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 210,
+      "passed": true
+    },
+    {
+      "id": "accessory-clover-headband-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 210,
+      "passed": true
+    },
+    {
+      "id": "accessory-black-mantle-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 280,
+      "passed": true
+    },
+    {
+      "id": "accessory-black-mantle-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 280,
+      "passed": true
+    },
+    {
+      "id": "accessory-grimoire-satchel-v1",
+      "format": "gltf",
+      "parts": 1,
+      "triangles": 302,
+      "passed": true
+    },
+    {
+      "id": "accessory-grimoire-satchel-v1",
+      "format": "fbx",
+      "parts": 1,
+      "triangles": 302,
+      "passed": true
+    },
+    {
+      "id": "outfit-ink-knight-female-v1",
+      "format": "gltf",
+      "parts": 5,
+      "triangles": 1374,
+      "passed": true
+    },
+    {
+      "id": "outfit-ink-knight-female-v1",
+      "format": "fbx",
+      "parts": 5,
+      "triangles": 1374,
+      "passed": true
+    },
+    {
+      "id": "outfit-forest-initiate-female-v1",
+      "format": "gltf",
+      "parts": 5,
+      "triangles": 1550,
+      "passed": true
+    },
+    {
+      "id": "outfit-forest-initiate-female-v1",
+      "format": "fbx",
+      "parts": 5,
+      "triangles": 1550,
+      "passed": true
+    }
+  ],
+  "notVerified": [
+    "Roblox Studio import",
+    "custom rig exact fit",
+    "attachment offsets",
+    "animation clipping",
+    "cloud upload and moderation"
+  ]
+}

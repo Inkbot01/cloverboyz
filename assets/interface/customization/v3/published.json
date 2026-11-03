@@ -1,0 +1,207 @@
+{
+  "sourceUnitScale": 100,
+  "importedAt": "2026-10-08",
+  "method": "Studio native FBX importer",
+  "parts": [
+    {
+      "size": [
+        119.4812240600586,
+        176.5,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://85004785910073",
+      "name": "outfit-forest-initiate-female-v1__Left_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://111019054039330",
+      "name": "outfit-forest-initiate-female-v1__Left_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        176.5,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://95408650618561",
+      "name": "outfit-forest-initiate-female-v1__Right_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://109651023626568",
+      "name": "outfit-forest-initiate-female-v1__Right_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        288.393310546875,
+        397.88885498046875,
+        198.95794677734375
+      ],
+      "mesh": "rbxassetid://102495273607353",
+      "name": "outfit-forest-initiate-female-v1__Torso",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        176.5,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://84359657405796",
+      "name": "outfit-forest-initiate-v1__Left_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://90012979776558",
+      "name": "outfit-forest-initiate-v1__Left_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        176.5,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://77556556111352",
+      "name": "outfit-forest-initiate-v1__Right_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://107909600330399",
+      "name": "outfit-forest-initiate-v1__Right_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        288.393310546875,
+        397.88885498046875,
+        198.95794677734375
+      ],
+      "mesh": "rbxassetid://110207191025739",
+      "name": "outfit-forest-initiate-v1__Torso",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        205.00001525878906,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://117910921012083",
+      "name": "outfit-ink-knight-female-v1__Left_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://93567350214865",
+      "name": "outfit-ink-knight-female-v1__Left_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        205.00001525878906,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://140022976346480",
+      "name": "outfit-ink-knight-female-v1__Right_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://80817334176123",
+      "name": "outfit-ink-knight-female-v1__Right_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        246.67320251464844,
+        210.50001525878906,
+        184.21929931640625
+      ],
+      "mesh": "rbxassetid://132987781195777",
+      "name": "outfit-ink-knight-female-v1__Torso",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        205.00001525878906,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://138724897470650",
+      "name": "outfit-ink-knight-v1__Left_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://123384519749189",
+      "name": "outfit-ink-knight-v1__Left_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        119.4812240600586,
+        205.00001525878906,
+        137.90000915527344
+      ],
+      "mesh": "rbxassetid://131376201002658",
+      "name": "outfit-ink-knight-v1__Right_Arm",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        109,
+        199.50003051757812,
+        125
+      ],
+      "mesh": "rbxassetid://114790145285462",
+      "name": "outfit-ink-knight-v1__Right_Leg",
+      "texture": "rbxassetid://103727090592936"
+    },
+    {
+      "size": [
+        246.67320251464844,
+        210.50001525878906,
+        184.21929931640625
+      ],
+      "mesh": "rbxassetid://75682516943514",
+      "name": "outfit-ink-knight-v1__Torso",
+      "texture": "rbxassetid://103727090592936"
+    }
+  ]
+}

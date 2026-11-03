@@ -1,0 +1,37 @@
+{
+  "sourceUnitScale": 100,
+  "importedAt": "2026-10-08",
+  "method": "Studio native FBX importer",
+  "parts": [
+    {
+      "size": [
+        155,
+        166.00003051757812,
+        183.5
+      ],
+      "mesh": "rbxassetid://92049220387183",
+      "name": "hair-ember-ponytail-v1__Handle",
+      "texture": "rbxassetid://84442704883340"
+    },
+    {
+      "size": [
+        155,
+        151,
+        131
+      ],
+      "mesh": "rbxassetid://70679603417563",
+      "name": "hair-iron-spikes-v1__Handle",
+      "texture": "rbxassetid://84442704883340"
+    },
+    {
+      "size": [
+        153,
+        129.5,
+        130.5
+      ],
+      "mesh": "rbxassetid://107619070648777",
+      "name": "hair-wind-swept-v1__Handle",
+      "texture": "rbxassetid://84442704883340"
+    }
+  ]
+}

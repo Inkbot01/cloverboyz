@@ -1,6 +1,6 @@
 local RunService = game:GetService("RunService")
 
-return function(character)
+return function(character, rebuildShowcase)
 	assert(RunService:IsStudio() and not RunService:IsRunning(), "This preview requires Studio Edit mode")
 	assert(loadstring, "Refresh the preview from Studio's plugin or command-bar context")
 	local root = script.Parent
@@ -27,6 +27,9 @@ return function(character)
 		cache[module] = result
 		loading[module] = nil
 		return result
+	end
+	if rebuildShowcase then
+		freshRequire(root.CustomizationShowcase)()
 	end
 	local mount = freshRequire(root.StudioPreview)
 	local old = game:GetService("CoreGui"):FindFirstChild("CloverInterfacePreview")

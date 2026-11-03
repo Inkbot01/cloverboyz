@@ -1,0 +1,646 @@
+{
+  "version": 1,
+  "status": "published-and-integrated",
+  "style": "faceted low-poly pixel fantasy; ink, olive charcoal, parchment and brass",
+  "rig": "Approximate custom Male/Female silhouettes from user Studio screenshot, October 4 2026. No source rig was available for exact fitting.",
+  "coordinates": {
+    "source": "Blender Z-up, front -Y",
+    "unit": "1 source unit = 1 intended Roblox stud",
+    "bodyCenters": {
+      "Head": [
+        0,
+        0,
+        4.5
+      ],
+      "Torso": [
+        0,
+        0,
+        3
+      ],
+      "Left Arm": [
+        -1.5,
+        0,
+        3
+      ],
+      "Right Arm": [
+        1.5,
+        0,
+        3
+      ],
+      "Left Leg": [
+        -0.5,
+        0,
+        1
+      ],
+      "Right Leg": [
+        0.5,
+        0,
+        1
+      ]
+    },
+    "referenceHeight": 5,
+    "referenceHeadDimensions": [
+      1.4,
+      1,
+      1
+    ],
+    "femaleTorsoWidthScaleByHeight": [
+      [
+        2.05,
+        1
+      ],
+      [
+        2.75,
+        0.73
+      ],
+      [
+        3.1,
+        0.77
+      ],
+      [
+        3.65,
+        1
+      ]
+    ],
+    "measurements": "Illustrative source-unit estimates from screenshot, not measured Studio dimensions"
+  },
+  "palette": {
+    "file": "exports/clover-palette-v1.png",
+    "size": [
+      16,
+      16
+    ],
+    "filter": "nearest",
+    "uv": "constant texel per polygon",
+    "colors": {
+      "ink": "1D2421",
+      "shadow": "111715",
+      "cloth": "343D34",
+      "forest": "3B5742",
+      "sage": "6B8060",
+      "brass": "AA8749",
+      "gold": "D2B577",
+      "ivory": "E1D9BC",
+      "silver": "B8BCAD",
+      "silver_dark": "737E77",
+      "leather": "554335",
+      "leather_light": "81634A",
+      "auburn": "754634",
+      "auburn_light": "AF7652",
+      "skin": "B78D68",
+      "steel": "65746D"
+    },
+    "atlasRectangles": {
+      "ink": [
+        0,
+        12,
+        4,
+        4
+      ],
+      "shadow": [
+        4,
+        12,
+        4,
+        4
+      ],
+      "cloth": [
+        8,
+        12,
+        4,
+        4
+      ],
+      "forest": [
+        12,
+        12,
+        4,
+        4
+      ],
+      "sage": [
+        0,
+        8,
+        4,
+        4
+      ],
+      "brass": [
+        4,
+        8,
+        4,
+        4
+      ],
+      "gold": [
+        8,
+        8,
+        4,
+        4
+      ],
+      "ivory": [
+        12,
+        8,
+        4,
+        4
+      ],
+      "silver": [
+        0,
+        4,
+        4,
+        4
+      ],
+      "silver_dark": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "leather": [
+        8,
+        4,
+        4,
+        4
+      ],
+      "leather_light": [
+        12,
+        4,
+        4,
+        4
+      ],
+      "auburn": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "auburn_light": [
+        4,
+        0,
+        4,
+        4
+      ],
+      "skin": [
+        8,
+        0,
+        4,
+        4
+      ],
+      "steel": [
+        12,
+        0,
+        4,
+        4
+      ]
+    },
+    "sliceMargins": null
+  },
+  "assets": [
+    {
+      "id": "hair-iron-spikes-v1",
+      "category": "Hair",
+      "suggestedAttachment": "HairAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        4.5
+      ],
+      "gltf": "exports/hair-iron-spikes-v1.gltf",
+      "fbx": "exports/hair-iron-spikes-v1.fbx",
+      "triangles": 352,
+      "bounds": {
+        "min": [
+          -0.8889999985694885,
+          -0.7599999904632568,
+          4.25
+        ],
+        "max": [
+          0.8889999985694885,
+          0.6299999952316284,
+          6.03000020980835
+        ]
+      },
+      "parts": [
+        {
+          "name": "hair-iron-spikes-v1",
+          "bodySegment": "",
+          "triangles": 352
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "hair-wind-swept-v1",
+      "category": "Hair",
+      "suggestedAttachment": "HairAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        4.5
+      ],
+      "gltf": "exports/hair-wind-swept-v1.gltf",
+      "fbx": "exports/hair-wind-swept-v1.fbx",
+      "triangles": 352,
+      "bounds": {
+        "min": [
+          -0.8959999680519104,
+          -0.75,
+          4.159999847412109
+        ],
+        "max": [
+          1.0080000162124634,
+          0.6499999761581421,
+          5.679999828338623
+        ]
+      },
+      "parts": [
+        {
+          "name": "hair-wind-swept-v1",
+          "bodySegment": "",
+          "triangles": 352
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "hair-ember-ponytail-v1",
+      "category": "Hair",
+      "suggestedAttachment": "HairAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        4.5
+      ],
+      "gltf": "exports/hair-ember-ponytail-v1.gltf",
+      "fbx": "exports/hair-ember-ponytail-v1.fbx",
+      "triangles": 300,
+      "bounds": {
+        "min": [
+          -0.8680000305175781,
+          -0.7599999904632568,
+          3.380000114440918
+        ],
+        "max": [
+          0.8680000305175781,
+          1.350000023841858,
+          5.28000020980835
+        ]
+      },
+      "parts": [
+        {
+          "name": "hair-ember-ponytail-v1",
+          "bodySegment": "",
+          "triangles": 300
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "outfit-ink-knight-v1",
+      "category": "Outfit",
+      "suggestedAttachment": "Segmented R6 body pieces",
+      "fit": "male-straight",
+      "sourceAnchor": [
+        0,
+        0,
+        0
+      ],
+      "gltf": "exports/outfit-ink-knight-v1.gltf",
+      "fbx": "exports/outfit-ink-knight-v1.fbx",
+      "triangles": 1010,
+      "bounds": {
+        "min": [
+          -2.0434999465942383,
+          -0.6625000238418579,
+          0.004999995231628418
+        ],
+        "max": [
+          2.0434999465942383,
+          0.5479999780654907,
+          4.017499923706055
+        ]
+      },
+      "parts": [
+        {
+          "name": "Torso",
+          "bodySegment": "Torso",
+          "triangles": 314
+        },
+        {
+          "name": "Left Arm",
+          "bodySegment": "Left Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Left Leg",
+          "bodySegment": "Left Leg",
+          "triangles": 204
+        },
+        {
+          "name": "Right Arm",
+          "bodySegment": "Right Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Right Leg",
+          "bodySegment": "Right Leg",
+          "triangles": 204
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "outfit-forest-initiate-v1",
+      "category": "Outfit",
+      "suggestedAttachment": "Segmented R6 body pieces",
+      "fit": "male-straight",
+      "sourceAnchor": [
+        0,
+        0,
+        0
+      ],
+      "gltf": "exports/outfit-forest-initiate-v1.gltf",
+      "fbx": "exports/outfit-forest-initiate-v1.fbx",
+      "triangles": 1122,
+      "bounds": {
+        "min": [
+          -2.0434999465942383,
+          -0.6625000238418579,
+          0.004999995231628418
+        ],
+        "max": [
+          2.0434999465942383,
+          0.5479999780654907,
+          4.017499923706055
+        ]
+      },
+      "parts": [
+        {
+          "name": "Torso.001",
+          "bodySegment": "Torso",
+          "triangles": 426
+        },
+        {
+          "name": "Left Arm.001",
+          "bodySegment": "Left Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Left Leg.001",
+          "bodySegment": "Left Leg",
+          "triangles": 204
+        },
+        {
+          "name": "Right Arm.001",
+          "bodySegment": "Right Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Right Leg.001",
+          "bodySegment": "Right Leg",
+          "triangles": 204
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "accessory-clover-headband-v1",
+      "category": "Accessory",
+      "suggestedAttachment": "HatAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        4.5
+      ],
+      "gltf": "exports/accessory-clover-headband-v1.gltf",
+      "fbx": "exports/accessory-clover-headband-v1.fbx",
+      "triangles": 210,
+      "bounds": {
+        "min": [
+          -0.7507500052452087,
+          -0.8169999718666077,
+          4.110000133514404
+        ],
+        "max": [
+          0.9660000205039978,
+          0.7450000047683716,
+          4.900000095367432
+        ]
+      },
+      "parts": [
+        {
+          "name": "accessory-clover-headband-v1",
+          "bodySegment": "",
+          "triangles": 210
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "accessory-black-mantle-v1",
+      "category": "Accessory",
+      "suggestedAttachment": "BodyBackAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        3
+      ],
+      "gltf": "exports/accessory-black-mantle-v1.gltf",
+      "fbx": "exports/accessory-black-mantle-v1.fbx",
+      "triangles": 280,
+      "bounds": {
+        "min": [
+          -1.213431477546692,
+          -0.14000001549720764,
+          2.1552882194519043
+        ],
+        "max": [
+          1.2134315967559814,
+          0.9383518695831299,
+          4.089999675750732
+        ]
+      },
+      "parts": [
+        {
+          "name": "accessory-black-mantle-v1",
+          "bodySegment": "",
+          "triangles": 280
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "accessory-grimoire-satchel-v1",
+      "category": "Accessory",
+      "suggestedAttachment": "WaistCenterAttachment",
+      "fit": "shared-head-and-limbs",
+      "sourceAnchor": [
+        0,
+        0,
+        2
+      ],
+      "gltf": "exports/accessory-grimoire-satchel-v1.gltf",
+      "fbx": "exports/accessory-grimoire-satchel-v1.fbx",
+      "triangles": 302,
+      "bounds": {
+        "min": [
+          0.54749995470047,
+          -1.0175000429153442,
+          1.9700000286102295
+        ],
+        "max": [
+          1.2699999809265137,
+          -0.4440000355243683,
+          3.06000018119812
+        ]
+      },
+      "parts": [
+        {
+          "name": "accessory-grimoire-satchel-v1",
+          "bodySegment": "",
+          "triangles": 302
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "outfit-ink-knight-female-v1",
+      "category": "Outfit",
+      "suggestedAttachment": "Segmented R6 body pieces",
+      "fit": "female-tapered",
+      "sourceAnchor": [
+        0,
+        0,
+        0
+      ],
+      "gltf": "exports/outfit-ink-knight-female-v1.gltf",
+      "fbx": "exports/outfit-ink-knight-female-v1.fbx",
+      "triangles": 1374,
+      "bounds": {
+        "min": [
+          -2.0434999465942383,
+          -0.6625000238418579,
+          0.004999995231628418
+        ],
+        "max": [
+          2.0434999465942383,
+          0.5479999780654907,
+          4.017499923706055
+        ]
+      },
+      "parts": [
+        {
+          "name": "Torso.002",
+          "bodySegment": "Torso",
+          "triangles": 678
+        },
+        {
+          "name": "Left Arm.002",
+          "bodySegment": "Left Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Left Leg.002",
+          "bodySegment": "Left Leg",
+          "triangles": 204
+        },
+        {
+          "name": "Right Arm.002",
+          "bodySegment": "Right Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Right Leg.002",
+          "bodySegment": "Right Leg",
+          "triangles": 204
+        }
+      ],
+      "robloxAssetId": null
+    },
+    {
+      "id": "outfit-forest-initiate-female-v1",
+      "category": "Outfit",
+      "suggestedAttachment": "Segmented R6 body pieces",
+      "fit": "female-tapered",
+      "sourceAnchor": [
+        0,
+        0,
+        0
+      ],
+      "gltf": "exports/outfit-forest-initiate-female-v1.gltf",
+      "fbx": "exports/outfit-forest-initiate-female-v1.fbx",
+      "triangles": 1550,
+      "bounds": {
+        "min": [
+          -2.0434999465942383,
+          -0.6625000238418579,
+          0.004999995231628418
+        ],
+        "max": [
+          2.0434999465942383,
+          0.5479999780654907,
+          4.017499923706055
+        ]
+      },
+      "parts": [
+        {
+          "name": "Torso.003",
+          "bodySegment": "Torso",
+          "triangles": 854
+        },
+        {
+          "name": "Left Arm.003",
+          "bodySegment": "Left Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Left Leg.003",
+          "bodySegment": "Left Leg",
+          "triangles": 204
+        },
+        {
+          "name": "Right Arm.003",
+          "bodySegment": "Right Arm",
+          "triangles": 144
+        },
+        {
+          "name": "Right Leg.003",
+          "bodySegment": "Right Leg",
+          "triangles": 204
+        }
+      ],
+      "robloxAssetId": null
+    }
+  ],
+  "limitations": [
+    "No cloud asset IDs or runtime catalog changes.",
+    "Rigid segmented game cosmetics, not skinned or caged Marketplace layered clothing.",
+    "Fit and attachment offsets require Studio import inspection and pose testing.",
+    "Hair intersects scalp intentionally; interlocking strands form separate closed shells.",
+    "Body segment names assume six-piece rigs; confirm names and offsets on the custom rigs.",
+    "Blender contact sheet is an offline geometry preview, not a Roblox engine screenshot."
+  ],
+  "references": [
+    "https://create.roblox.com/docs/art/modeling",
+    "https://create.roblox.com/docs/art/accessories/creating-rigid/importing",
+    "https://create.roblox.com/docs/avatar/rigid-accessories"
+  ],
+  "face": {
+    "id": "face-determined-emerald-v1",
+    "file": "exports/face-determined-emerald-v1.png",
+    "source": "OpenAI built-in image_gen",
+    "size": [
+      1254,
+      1254
+    ],
+    "channels": 4,
+    "robloxAssetId": null,
+    "status": "generated alpha texture; head fit unverified"
+  },
+  "integration": {
+    "published": "../published.json",
+    "fitting": "../fitting.json",
+    "date": "2026-10-08",
+    "verification": "Native Edit-mode front/back and desktop Customize views; 68 successful content fetch callbacks; animation not tested."
+  }
+}

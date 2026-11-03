@@ -1,0 +1,847 @@
+<roblox version="4">
+  <Item class="Folder" referent="0">
+    <Properties>
+      <string name="Name">CustomizationTemplates</string>
+    </Properties>
+    <Item class="Model" referent="1">
+      <Properties>
+        <string name="Name">accessory-black-mantle-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIJAAAAQWNjZXNzb3J5</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="2">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQAAAAAAMPs9AGDMPg0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://131469238308838</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>242.68631</X>
+            <Y>193.47116</Y>
+            <Z>107.83516</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>2.4268646</X>
+            <Y>1.9347076</Y>
+            <Z>1.0783539</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="3">
+      <Properties>
+        <string name="Name">accessory-clover-headband-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIJAAAAQWNjZXNzb3J5</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="4">
+        <Properties>
+          <string name="Name">Head</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIEAAAASGVhZAkAAABGaXRPZmZzZXQRAGjcvQAApDsAcBO9DQAAAFJlZmVyZW5jZVNpemURADOzPwAAgD8AAIA/</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://137120128257394</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>171.67499</X>
+            <Y>79</Y>
+            <Z>156.19998</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.7167511</X>
+            <Y>0.7899933</Y>
+            <Z>1.5619965</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="5">
+      <Properties>
+        <string name="Name">accessory-grimoire-satchel-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIJAAAAQWNjZXNzb3J5</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="6">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQCkaL8AUvi+ABI7vw0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://103840235609870</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>72.250015</X>
+            <Y>109.000015</Y>
+            <Z>57.35002</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>0.72250366</X>
+            <Y>1.0899963</Y>
+            <Z>0.5735016</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="7">
+      <Properties>
+        <string name="Name">hair-ember-ponytail-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIEAAAASGFpcg==</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="8">
+        <Properties>
+          <string name="Name">Head</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIEAAAASGVhZAkAAABGaXRPZmZzZXQRAAAAAABcD74AIEU+DQAAAFJlZmVyZW5jZVNpemURAACgPwAAgD+AZoY/</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://92049220387183</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>155</X>
+            <Y>166.00003</Y>
+            <Z>183.5</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.550003</X>
+            <Y>1.6600037</Y>
+            <Z>1.8350067</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="9">
+      <Properties>
+        <string name="Name">hair-iron-spikes-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIEAAAASGFpcg==</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="10">
+        <Properties>
+          <string name="Name">Head</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIEAAAASGVhZAkAAABGaXRPZmZzZXQRAAAAAAAAwD4AIIW9DQAAAFJlZmVyZW5jZVNpemURAACgPwAAgD+AZoY/</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://70679603417563</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>155</X>
+            <Y>151</Y>
+            <Z>131</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.550003</X>
+            <Y>1.5099945</Y>
+            <Z>1.3099976</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="11">
+      <Properties>
+        <string name="Name">hair-wind-swept-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIEAAAASGFpcg==</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="12">
+        <Properties>
+          <string name="Name">Head</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIEAAAASGVhZAkAAABGaXRPZmZzZXQRAAAAAAD2iD4AAIC9DQAAAFJlZmVyZW5jZVNpemURAACgPwAAgD+AZoY/</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://107619070648777</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>153</X>
+            <Y>129.5</Y>
+            <Z>130.5</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.5299988</X>
+            <Y>1.2949982</Y>
+            <Z>1.3049927</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://84442704883340</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="13">
+      <Properties>
+        <string name="Name">outfit-forest-initiate-female-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIGAAAAT3V0Zml0</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="14">
+        <Properties>
+          <string name="Name">Left Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBBcm0JAAAARml0T2Zmc2V0EQAApLsAmFk+AJCYvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://85004785910073</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>176.5</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>1.7649994</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="15">
+        <Properties>
+          <string name="Name">Left Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBMZWcJAAAARml0T2Zmc2V0EQAAAAAAAPY7ANijvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://111019054039330</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="16">
+        <Properties>
+          <string name="Name">Right Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgQXJtCQAAAEZpdE9mZnNldBEAAKS7AJhZPgCQmL0NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://95408650618561</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>176.5</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>1.7649994</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="17">
+        <Properties>
+          <string name="Name">Right Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgTGVnCQAAAEZpdE9mZnNldBEAAAAAAAD2OwDYo70NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://109651023626568</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="18">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQAAAAAAs0O/AKjLPQ0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://102495273607353</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>288.3933</X>
+            <Y>397.88885</Y>
+            <Z>198.95795</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>2.8839264</X>
+            <Y>3.9788818</Y>
+            <Z>1.9895782</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="19">
+      <Properties>
+        <string name="Name">outfit-forest-initiate-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIGAAAAT3V0Zml0</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="20">
+        <Properties>
+          <string name="Name">Left Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBBcm0JAAAARml0T2Zmc2V0EQAApLsAmFk+AJCYvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://84359657405796</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>176.5</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>1.7649994</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="21">
+        <Properties>
+          <string name="Name">Left Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBMZWcJAAAARml0T2Zmc2V0EQAAAAAAAPY7ANijvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://90012979776558</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="22">
+        <Properties>
+          <string name="Name">Right Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgQXJtCQAAAEZpdE9mZnNldBEAAKS7AJhZPgCQmL0NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://77556556111352</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>176.5</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>1.7649994</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="23">
+        <Properties>
+          <string name="Name">Right Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgTGVnCQAAAEZpdE9mZnNldBEAAAAAAAD2OwDYo70NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://107909600330399</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="24">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQAAAAAAs0O/AKjLPQ0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://110207191025739</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>288.3933</X>
+            <Y>397.88885</Y>
+            <Z>198.95795</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>2.8839264</X>
+            <Y>3.9788818</Y>
+            <Z>1.9895782</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="25">
+      <Properties>
+        <string name="Name">outfit-ink-knight-female-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIGAAAAT3V0Zml0</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="26">
+        <Properties>
+          <string name="Name">Left Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBBcm0JAAAARml0T2Zmc2V0EQAApLsAYI89AJCYvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://117910921012083</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>205.00002</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>2.050003</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="27">
+        <Properties>
+          <string name="Name">Left Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBMZWcJAAAARml0T2Zmc2V0EQAAAAAAAPY7ANijvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://93567350214865</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="28">
+        <Properties>
+          <string name="Name">Right Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgQXJtCQAAAEZpdE9mZnNldBEAAKS7AGCPPQCQmL0NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://140022976346480</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>205.00002</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>2.050003</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="29">
+        <Properties>
+          <string name="Name">Right Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgTGVnCQAAAEZpdE9mZnNldBEAAAAAAAD2OwDYo70NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://80817334176123</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="30">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQCAprsA+Kg9AABLuw0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://132987781195777</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>246.6732</X>
+            <Y>210.50002</Y>
+            <Z>184.2193</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>2.4667358</X>
+            <Y>2.1049957</Y>
+            <Z>1.8421936</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Model" referent="31">
+      <Properties>
+        <string name="Name">outfit-ink-knight-v1</string>
+        <BinaryString name="AttributesSerialize">AQAAAAgAAABDYXRlZ29yeQIGAAAAT3V0Zml0</BinaryString>
+      </Properties>
+      <Item class="MeshPart" referent="32">
+        <Properties>
+          <string name="Name">Left Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBBcm0JAAAARml0T2Zmc2V0EQAApLsAYI89AJCYvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://138724897470650</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>205.00002</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>2.050003</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="33">
+        <Properties>
+          <string name="Name">Left Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIIAAAATGVmdCBMZWcJAAAARml0T2Zmc2V0EQAAAAAAAPY7ANijvQ0AAABSZWZlcmVuY2VTaXplEQAAgD8AAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://123384519749189</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="34">
+        <Properties>
+          <string name="Name">Right Arm</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgQXJtCQAAAEZpdE9mZnNldBEAAKS7AGCPPQCQmL0NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://131376201002658</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>119.48123</X>
+            <Y>205.00002</Y>
+            <Z>137.90001</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.194809</X>
+            <Y>2.050003</Y>
+            <Z>1.3789978</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="35">
+        <Properties>
+          <string name="Name">Right Leg</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIJAAAAUmlnaHQgTGVnCQAAAEZpdE9mZnNldBEAAAAAAAD2OwDYo70NAAAAUmVmZXJlbmNlU2l6ZREAAIA/AAAAQAAAgD8=</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://114790145285462</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>109</X>
+            <Y>199.50003</Y>
+            <Z>125</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>1.0899963</X>
+            <Y>1.9949951</Y>
+            <Z>1.25</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+      <Item class="MeshPart" referent="36">
+        <Properties>
+          <string name="Name">Torso</string>
+          <bool name="Anchored">true</bool>
+          <BinaryString name="AttributesSerialize">AwAAAAsAAABCb2R5U2VnbWVudAIFAAAAVG9yc28JAAAARml0T2Zmc2V0EQCAprsA+Kg9AABLuw0AAABSZWZlcmVuY2VTaXplEQAAAEAAAABAAACAPw==</BinaryString>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanQuery">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16777215</Color3uint8>
+          <bool name="DoubleSided">true</bool>
+          <bool name="Massless">true</bool>
+          <Content name="MeshContent">
+            <uri>rbxassetid://75682516943514</uri>
+          </Content>
+          <Vector3 name="InitialSize">
+            <X>246.6732</X>
+            <Y>210.50002</Y>
+            <Z>184.2193</Z>
+          </Vector3>
+          <Vector3 name="size">
+            <X>2.4667358</X>
+            <Y>2.1049957</Y>
+            <Z>1.8421936</Z>
+          </Vector3>
+          <Content name="TextureContent">
+            <uri>rbxassetid://103727090592936</uri>
+          </Content>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

@@ -1,25 +1,29 @@
 local Appearance = {}
 
 Appearance.Options = {
+	Gender = {
+		{ Id = "male", Name = "Male" },
+		{ Id = "female", Name = "Female" },
+	},
 	Hair = {
-		{ Id = "original", Name = "Your hairstyle" },
-		{ Id = "none", Name = "No hair" },
+		{ Id = "iron_spikes", Name = "Iron spikes" },
+		{ Id = "wind_swept", Name = "Wind swept" },
+		{ Id = "ember_ponytail", Name = "Ember ponytail" },
 	},
 	Face = {
-		{ Id = "original", Name = "Your expression" },
-		{ Id = "classic", Name = "Classic smile" },
-		{ Id = "blank", Name = "No expression" },
+		{ Id = "determined", Name = "Emerald resolve" },
 	},
 	Outfit = {
-		{ Id = "original", Name = "Your outfit" },
-		{ Id = "training", Name = "Training clothes" },
+		{ Id = "ink_knight", Name = "Black Bulls" },
+		{ Id = "forest_initiate", Name = "Golden Dawn" },
 	},
 	Accessories = {
-		{ Id = "visible", Name = "Show accessories" },
-		{ Id = "hidden", Name = "Hide accessories" },
+		{ Id = "hidden", Name = "None" },
+		{ Id = "headband", Name = "Clover headband" },
+		{ Id = "grimoire", Name = "Grimoire satchel" },
+		{ Id = "knight_set", Name = "Headband & grimoire" },
 	},
 	SkinTone = {
-		{ Id = "original", Name = "Original" },
 		{ Id = "porcelain", Name = "Porcelain", Color = "F2D8BF" },
 		{ Id = "sand", Name = "Sand", Color = "DDBA94" },
 		{ Id = "warm", Name = "Warm tan", Color = "C7966C" },
@@ -29,7 +33,6 @@ Appearance.Options = {
 		{ Id = "ebony", Name = "Ebony", Color = "422D26" },
 	},
 	HairColor = {
-		{ Id = "original", Name = "Original" },
 		{ Id = "ink", Name = "Ink", Color = "242329" },
 		{ Id = "chestnut", Name = "Chestnut", Color = "664638" },
 		{ Id = "auburn", Name = "Auburn", Color = "994F35" },
@@ -38,27 +41,17 @@ Appearance.Options = {
 		{ Id = "sage", Name = "Sage", Color = "788D72" },
 		{ Id = "plum", Name = "Plum", Color = "685473" },
 	},
-	OutfitColor = {
-		{ Id = "onyx", Name = "Onyx", Color = "303238" },
-		{ Id = "ivory", Name = "Ivory", Color = "DDD2B8" },
-		{ Id = "forest", Name = "Forest", Color = "496452" },
-		{ Id = "wine", Name = "Wine", Color = "783F46" },
-		{ Id = "ocean", Name = "Ocean", Color = "445D79" },
-		{ Id = "ochre", Name = "Ochre", Color = "AF9058" },
-		{ Id = "slate", Name = "Slate", Color = "697879" },
-		{ Id = "violet", Name = "Violet", Color = "71617F" },
-	},
 }
 
 function Appearance.Defaults()
 	return {
-		Hair = "original",
-		Face = "original",
-		Outfit = "original",
-		Accessories = "visible",
-		SkinTone = "original",
-		HairColor = "original",
-		OutfitColor = "onyx",
+		Gender = "male",
+		Hair = "iron_spikes",
+		Face = "determined",
+		Outfit = "ink_knight",
+		Accessories = "hidden",
+		SkinTone = "warm",
+		HairColor = "silver",
 		Scale = 1,
 	}
 end

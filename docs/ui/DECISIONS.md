@@ -51,3 +51,42 @@ GitHub must be **InkBot01**, never `isaacalazar`. Origin is `https://github.com/
 ## Icon crop incident
 
 Roblox resized the 1254 × 1254 source atlas to 1024 × 1024 on delivery. Source-coordinate crops caused the cut-off/neighboring icons and empty cells shown in the user screenshots. `manifest.json` retains original crop rectangles and the verified published size. `build_icon_atlas.py` generates production coordinates; all sixteen crops are bounded and disjoint. Native icon holders center an aspect-constrained ImageLabel inside the padded frame. No reupload was needed. Do not silently assume a source PNG retains its dimensions after publishing.
+
+## Character assets — October 4, 2026
+
+The user requested literal customization assets, including hair and outfits, and supplied a Studio screenshot of custom `Male` and `Female` rigs. Both have blocky heads and limbs; the female torso is tapered. `assets/interface/customization/v1/` now holds a local source pack: three hair meshes, two outfit designs each with straight/tapered torso fits, three accessories, and a generated transparent face texture. It includes Blender sources, FBX/glTF exports, palette PNG, manifest, generation prompt and offline front/back previews.
+
+The fitting basis is estimated from the screenshot, not a downloaded or inspected rig. Outfits use five rigid body segments. They are not caged or skinned layered clothing, and exported hair/accessories still need attachment fitting. `AppearanceModel` and live saves do not expose this pack. No invented IDs, Studio Source writes, Play sessions, or Rojo serve sessions were used.
+
+The asset builder and export checker live in `tools/ui-art/`. Mesh exports use a shared palette UV map; only the face is AI-generated raster artwork. Blender reimport checks are separate from required Studio import, texture, attachment and animation review. The existing nine-image uploader remains unchanged. Preserve these limits when integrating the pack.
+
+All 20 Blender FBX/glTF reimports passed local geometry, part-count, material, UV, external-file and bounds checks. The RGBA face retains transparent surroundings. Front/back geometry previews were inspected. Rojo build and StyLua with Windows line endings passed; default StyLua reports the checkout's existing CRLF endings. No runtime files were reformatted.
+
+
+## Character pack integration ? October 8, 2026
+
+The October 4 source-only limits above are historical. All ten mesh models (26 parts), the palette and pixel face are now published and selectable in Customize. Studio's regular FBX importer succeeded under its current group selection without the missing Open Cloud key. The face uploaded through Studio MCP. The existing nine-image Tungsten configuration remains unchanged.
+
+Use the disk-backed CustomizationTemplates model as the source of truth. Preserve serialized InitialSize from the native import, normalize Size to studs, and compute fitting offsets after updating Blender's visible dependency graph. Native inspection caught both scale metadata and stale transform problems before completion. Fitting uses measured Male/Female body dimensions; clothing consists of rigid welded segments. Four removable copies demonstrate the pack in Workspace; originals remain untouched.
+
+All 68 content fetch callbacks succeeded. Native front/back views and the desktop selector preview rendered the assets. Template checks, 521 interface checks, StyLua and Rojo build passed. No Play session, persistent save implementation, character grants, or game publication was performed. The existing save contract remains unchanged; animation and mobile checks remain outstanding.
+
+
+## Hair fit and gender correction ? October 8, 2026
+
+The user rejected the first hair silhouettes and exposed head corners. Wide mannequin screenshots were inadequate fit evidence. Rebuilt all three hair meshes around the measured 1.25x1x1.05 head with continuous square-corner caps, shorter spikes and connected fringe/temples. The v2 Blender/FBX sources, fitting metadata and genuine replacement mesh IDs live in `assets/interface/customization/v2/`. `rebuild_customization_hair.py` includes 30 head-corner ray checks. `build_customization_templates.luau` overlays v2 meshes/fittings onto the unchanged outfit/accessory pack, preserving catalog IDs and native InitialSize metadata.
+
+Added the first Customize selector, Gender: Current rig / Male / Female. Inspection confirmed the custom rigs have identical part sizes/offsets and differ by torso CharacterMesh 48112070. `CharacterRig` changes that definition only on disposable preview clones, sets the fitting attribute and automatically selects the corresponding outfit variant. Other appearance choices remain selected. Gender participates in draft validation, reset and the existing save adapter contract; persistent saving remains unimplemented.
+
+Native verification exercised all 12 gender/hair/outfit combinations and confirmed the torso, cosmetic welds, outfit variant and unchanged originals. All 52 template fetch callbacks succeeded. Close desktop hair views were inspected; evidence is in `output/ui-previews/hair-v2/`. 526 interface checks, template checks, StyLua and Rojo build passed. No Play session or game publication occurred. Animation and mobile visual review remain outstanding.
+
+
+## Squad uniforms and real catalog choices ? October 8, 2026
+
+Removed Current rig, Your hairstyle/expression/outfit, Original/Base colors, built-in smile/blank face, training clothes and source-avatar accessory toggles from the production catalog. Male/Female, actual imported assets and explicit colors now define every default. None remains a deliberate accessory choice. Single-choice expressions disable their arrows. The ineffective clothing color palette was removed; squad palettes remain authored. Existing internal outfit IDs map to Black Bulls (`ink_knight`) and Golden Dawn (`forest_initiate`). Old IDs/fields are rejected rather than revived in the interface.
+
+Replaced all 20 outfit MeshParts with v3 squad designs informed by the official [film character artwork](https://bclover-movie.jp/character/). Black Bulls uses an asymmetric black/gold short robe and horned skull badge. Golden Dawn uses red/white tailoring, a long cream/blue cape, raised collar, shoulder insignia and diagonal strap. Both have separate female fits. These are blocky adaptations rather than exact illustration replicas. The capes are rigid torso geometry; walking/combat deformation is unverified.
+
+`build_squad_outfits.py` produces the v3 Blender/FBX, 16-color palette and fitting data. Studio's regular importer published 20 meshes and palette 103727090592936; actual IDs are in v3/published.json. The template builder applies revisions in order (v2 hair, v3 outfits), preserving InitialSize. The existing Tungsten UI uploader is unchanged. Optional mantle geometry is retained in the library but removed from the menu and accessory combination to avoid duplicating the squad robes.
+
+Verified 561 interface checks, the 10-template/26-mesh model, all 12 native gender/hair/outfit combinations, and 52 content fetch callbacks with no failures. Desktop and native 700x1000 safe-area inspection found no removed placeholder labels or selector text overflow. Screenshots are under `output/ui-previews/squad-v3/`. StyLua and Rojo build passed. No Play session, persistence implementation or place publication occurred.

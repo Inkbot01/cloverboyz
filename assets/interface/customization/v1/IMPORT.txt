@@ -1,0 +1,33 @@
+CURRENT INTEGRATION ? OCTOBER 8, 2026
+Published IDs: published.json. Measured fitting offsets: fitting.json.
+All 26 mesh parts, palette and face are imported. Runtime templates are in src/shared/Assets/CustomizationTemplates.rbxmx.
+Rebuild with: lune run tools/ui-art/build_customization_templates
+Validate with: lune run tools/check_customization_templates
+The Customize catalog includes the entire pack. Four dressed copies are in Workspace.CloverCustomizationShowcase.
+Studio content loading and front/back views passed. Animation fit and mobile review remain outstanding.
+The original manual import notes below describe the source pack before integration.
+
+CLOVERBOYZ CHARACTER ASSET STARTER PACK V1
+
+3 hair styles, 2 outfit designs each with Male/Female torso fits, 3 accessories, 1 transparent face.
+Source: clover-customization-v1.blend. Rebuild with tools/ui-art/build_customization_assets.py in Blender 4.4 background mode.
+Each asset collection contains editable geometry. PREVIEW_ONLY contains display mannequins and is excluded from exports.
+
+IMPORT
+Use Studio Home > Import and choose one exports/*.gltf (keep adjacent .bin and .png files together), or the matching embedded-texture .fbx.
+Fit is estimated from the user's custom Male/Female Studio screenshot, not measured from a source rig.
+Keep hierarchy and inspect scale. The source mannequin is 5 units tall, torso 2 x 1 x 2, head 1.4 x 1 x 1.
+Female torso variants taper to 73 percent width at the waist. Adjust to the actual mesh before release.
+Exports retain shared mannequin coordinates. They do not include attachment objects or welds.
+Use the suggested attachment and source anchor in exports/manifest.json as fitting references.
+Hair and small accessories require fitting to the intended head or body attachment in Studio.
+Outfits contain five rigid pieces named by body segment. Fit each to its corresponding custom limb/torso, with collision disabled and Massless enabled.
+Check left/right limb assignments against your actual rig before attachment; preview coordinates are documented in the manifest.
+The short tabard and mantle are rigid game cosmetics. These are not skinned/caged Marketplace layered clothing.
+The face PNG has transparent surroundings and belongs on a classic head front decal. Upload and inspect transparency and alignment before catalog integration.
+
+VERIFICATION
+Blender source/export generation and front/back geometry previews are local checks only.
+No Studio import, attachment, motion, moderation or in-engine texture check has been performed.
+No cloud IDs were invented and no live catalog/save changes were made.
+Keep the existing nine-image interface upload pipeline unchanged; it does not publish this mesh pack.

@@ -1,0 +1,10 @@
+{
+  "source": "https://bclover-movie.jp/character/",
+  "images": [
+    "https://bclover-movie.jp/assets/img/character/chara_asta_full.png",
+    "https://bclover-movie.jp/assets/img/character/chara_yuno_full.png",
+    "https://bclover.jp/assets/img/character/chara1_main.png"
+  ],
+  "usage": "Visual reference only; not runtime textures",
+  "adaptation": "Rigid blocky squad garments fitted to custom Male/Female rigs"
+}

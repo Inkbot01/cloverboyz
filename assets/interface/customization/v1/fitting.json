@@ -1,0 +1,520 @@
+{
+  "hair-iron-spikes-v1": {
+    "category": "Hair",
+    "parts": [
+      {
+        "segment": "Head",
+        "offset": [
+          0.0,
+          0.64,
+          -0.065
+        ],
+        "size": [
+          1.778,
+          1.78,
+          1.39
+        ],
+        "referenceSize": [
+          1.4,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "hair-wind-swept-v1": {
+    "category": "Hair",
+    "parts": [
+      {
+        "segment": "Head",
+        "offset": [
+          0.056,
+          0.42,
+          -0.05
+        ],
+        "size": [
+          1.904,
+          1.52,
+          1.4
+        ],
+        "referenceSize": [
+          1.4,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "hair-ember-ponytail-v1": {
+    "category": "Hair",
+    "parts": [
+      {
+        "segment": "Head",
+        "offset": [
+          0.0,
+          -0.17,
+          0.295
+        ],
+        "size": [
+          1.736,
+          1.9,
+          2.11
+        ],
+        "referenceSize": [
+          1.4,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "outfit-ink-knight-v1": {
+    "category": "Outfit",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.0,
+          0.038586,
+          -0.0555
+        ],
+        "size": [
+          2.13,
+          1.947173,
+          1.207
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Arm",
+        "offset": [
+          -0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Arm",
+        "offset": [
+          0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "outfit-forest-initiate-v1": {
+    "category": "Outfit",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.0,
+          -0.034388,
+          -0.0555
+        ],
+        "size": [
+          2.13,
+          2.093122,
+          1.207
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Arm",
+        "offset": [
+          -0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Arm",
+        "offset": [
+          0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "accessory-clover-headband-v1": {
+    "category": "Accessory",
+    "parts": [
+      {
+        "segment": "Head",
+        "offset": [
+          0.107625,
+          0.005,
+          -0.036
+        ],
+        "size": [
+          1.71675,
+          0.79,
+          1.562
+        ],
+        "referenceSize": [
+          1.4,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "accessory-black-mantle-v1": {
+    "category": "Accessory",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.0,
+          0.122644,
+          0.399176
+        ],
+        "size": [
+          2.426863,
+          1.934711,
+          1.078352
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "accessory-grimoire-satchel-v1": {
+    "category": "Accessory",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.90875,
+          -0.485,
+          -0.73075
+        ],
+        "size": [
+          0.7225,
+          1.09,
+          0.5735
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "outfit-ink-knight-female-v1": {
+    "category": "Outfit",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.0,
+          0.038586,
+          -0.0555
+        ],
+        "size": [
+          2.08,
+          1.947173,
+          1.207
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Arm",
+        "offset": [
+          -0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Arm",
+        "offset": [
+          0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "outfit-forest-initiate-female-v1": {
+    "category": "Outfit",
+    "parts": [
+      {
+        "segment": "Torso",
+        "offset": [
+          0.0,
+          -0.034388,
+          -0.0555
+        ],
+        "size": [
+          2.08,
+          2.093122,
+          1.207
+        ],
+        "referenceSize": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Arm",
+        "offset": [
+          -0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Left Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Arm",
+        "offset": [
+          0.01,
+          0.04125,
+          -0.00575
+        ],
+        "size": [
+          1.067,
+          1.9525,
+          1.0985
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "segment": "Right Leg",
+        "offset": [
+          0.0,
+          0.005,
+          -0.05875
+        ],
+        "size": [
+          1.105,
+          2.0,
+          1.2075
+        ],
+        "referenceSize": [
+          1,
+          2,
+          1
+        ]
+      }
+    ]
+  }
+}

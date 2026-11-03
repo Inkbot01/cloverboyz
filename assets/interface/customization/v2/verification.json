@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-08",
+  "headDimensions": [
+    1.25,
+    1,
+    1.05
+  ],
+  "hairMeshes": 3,
+  "triangles": 750,
+  "cornerCoverageRays": 30,
+  "nativeGenderHairOutfitCombinations": 12,
+  "contentFetchCallbacks": 52,
+  "contentFetchFailures": 0,
+  "interfaceChecks": 526,
+  "playTested": false,
+  "mobileVisuallyReviewed": false
+}
